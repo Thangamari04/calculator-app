@@ -20,7 +20,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       final pickedFile = await picker.pickImage(source: source);
 
       if (pickedFile != null) {
-        _imageNotifier.value = File(pickedFile.path); // Update image using ValueNotifier
+        _imageNotifier.value = File(pickedFile.path); 
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('No image selected.')),
@@ -163,16 +163,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
         appBar: AppBar(
           title: null,
         toolbarHeight: screenHeight * 0.15,
-          //flexibleSpace: Padding(
-            //padding: EdgeInsets.all(screenWidth * 0.02),
-            //child: Align(
-              //alignment: Alignment.topLeft,
-              //child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLS83XErb0zP7lBJnTQv9C2onf30pSb7PFgfO7G-0HRYv4THiKre-UvZ2k_0t0dUFDrAo&usqp=CAU',
-              //height: screenHeight *0.1,
-              //fit:BoxFit.contain,
-              //),
-            //),
-          //),
+          
         centerTitle: false,
           backgroundColor: Colors.white,
           elevation: 1,

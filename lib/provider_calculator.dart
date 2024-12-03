@@ -63,16 +63,7 @@ class ProviderCalculator extends StatelessWidget {
       appBar: AppBar(
         title: null,
         toolbarHeight: screenHeight * 0.15,
-        //flexibleSpace: Padding(
-          //padding: EdgeInsets.all( screenWidth * 0.03),
-          //child: Align(
-            //alignment: Alignment.topLeft,
-            //child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLS83XErb0zP7lBJnTQv9C2onf30pSb7PFgfO7G-0HRYv4THiKre-UvZ2k_0t0dUFDrAo&usqp=CAU',
-            //height: screenHeight * 0.04,
-            //fit:BoxFit.cover,
-            //),
-          //),
-        //),
+        
         backgroundColor: Colors.white,
         elevation: 1,
       ),
@@ -179,7 +170,7 @@ class ProviderCalculator extends StatelessWidget {
               context.read<CalculatorProvider>().input(label);
             }
           },
-          screenWidth, // Pass screenWidth to buildButton
+          screenWidth, 
         );
       }).toList(),
     );

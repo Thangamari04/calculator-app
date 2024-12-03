@@ -61,17 +61,7 @@ class GetXCalculator extends StatelessWidget {
       appBar: AppBar(
         title: null,
         toolbarHeight: screenHeight * 0.15,
-          //flexibleSpace: Padding(
-            //padding: EdgeInsets.all(screenWidth * 0.02),
-            //child: Align(
-              //alignment: Alignment.topLeft,
-              //child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLS83XErb0zP7lBJnTQv9C2onf30pSb7PFgfO7G-0HRYv4THiKre-UvZ2k_0t0dUFDrAo&usqp=CAU',
-              //height: screenHeight *0.1,
-              //fit:BoxFit.contain,
-              //),
-            //),
-          //),
-        backgroundColor: Colors.white,
+                  backgroundColor: Colors.white,
         elevation: 1,
       ),
       body: SingleChildScrollView(
@@ -236,21 +226,21 @@ class GetXCalculator extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context);
     final screenWidth = mediaQuery.size.width;
 
-    final buttonPadding = screenWidth * 0.05; // Adjust factor as needed
+    final buttonPadding = screenWidth * 0.05; 
 
     return Padding(
-      padding: EdgeInsets.all(buttonPadding * 0.2), // Spacing between buttons
+      padding: EdgeInsets.all(buttonPadding * 0.2), 
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
           shape: const CircleBorder(),
-          padding: EdgeInsets.all(buttonPadding), // Use calculated padding
+          padding: EdgeInsets.all(buttonPadding), 
         ),
         child: Text(
           label,
           style: TextStyle(
-            fontSize: screenWidth * 0.07, // Adjust font size dynamically
+            fontSize: screenWidth * 0.07, 
             fontWeight: FontWeight.bold,
             color: (label == '=' || label == '+' || label == '-' ||
                     label == '×' || label == '÷')
