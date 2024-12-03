@@ -1,4 +1,4 @@
-#Tue Nov 26 16:00:33 IST 2024
-base.0=/home/thangam/my_flutter_pages/calculator_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+#Tue Dec 03 16:33:13 IST 2024
+base.0=/home/thangam/calculator_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

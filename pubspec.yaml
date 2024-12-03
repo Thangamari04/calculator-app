@@ -80,9 +80,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: montserrat-medium
+     - family: poppins-regular
        fonts:
-         - asset: assets/fonts/montserrat-medium.ttf
+         - asset: assets/fonts/poppins-regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

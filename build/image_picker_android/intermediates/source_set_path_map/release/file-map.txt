@@ -20,9 +20,9 @@ io.flutter.plugins.imagepicker.image_picker_android-jetified-lifecycle-viewmodel
 io.flutter.plugins.imagepicker.image_picker_android-jetified-tracing-1.2.0-19 /home/thangam/.gradle/caches/transforms-3/fee79d0d8ef3af5dbc14ef6d22d028cf/transformed/jetified-tracing-1.2.0/res
 io.flutter.plugins.imagepicker.image_picker_android-main-20 /home/thangam/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+17/android/src/main/res
 io.flutter.plugins.imagepicker.image_picker_android-release-21 /home/thangam/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+17/android/src/release/res
-io.flutter.plugins.imagepicker.image_picker_android-packaged_res-22 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/packaged_res/release
-io.flutter.plugins.imagepicker.image_picker_android-pngs-23 /home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/generated/res/pngs/release
-io.flutter.plugins.imagepicker.image_picker_android-resValues-24 /home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/generated/res/resValues/release
-io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-25 /home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
-io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-26 /home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-io.flutter.plugins.imagepicker.image_picker_android-merged_res-27 /home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/intermediates/merged_res/release
+io.flutter.plugins.imagepicker.image_picker_android-packaged_res-22 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/packaged_res/release
+io.flutter.plugins.imagepicker.image_picker_android-pngs-23 /home/thangam/calculator_app/build/image_picker_android/generated/res/pngs/release
+io.flutter.plugins.imagepicker.image_picker_android-resValues-24 /home/thangam/calculator_app/build/image_picker_android/generated/res/resValues/release
+io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-25 /home/thangam/calculator_app/build/image_picker_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-26 /home/thangam/calculator_app/build/image_picker_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.imagepicker.image_picker_android-merged_res-27 /home/thangam/calculator_app/build/image_picker_android/intermediates/merged_res/release

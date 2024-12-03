@@ -20,8 +20,8 @@ io.flutter.plugins.flutter_plugin_android_lifecycle-jetified-lifecycle-viewmodel
 io.flutter.plugins.flutter_plugin_android_lifecycle-jetified-tracing-1.2.0-19 /home/thangam/.gradle/caches/transforms-3/fee79d0d8ef3af5dbc14ef6d22d028cf/transformed/jetified-tracing-1.2.0/res
 io.flutter.plugins.flutter_plugin_android_lifecycle-main-20 /home/thangam/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.23/android/src/main/res
 io.flutter.plugins.flutter_plugin_android_lifecycle-release-21 /home/thangam/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.23/android/src/release/res
-io.flutter.plugins.flutter_plugin_android_lifecycle-pngs-22 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/generated/res/pngs/release
-io.flutter.plugins.flutter_plugin_android_lifecycle-resValues-23 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/generated/res/resValues/release
-io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-24 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/incremental/release/mergeReleaseResources/merged.dir
-io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-25 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-io.flutter.plugins.flutter_plugin_android_lifecycle-merged_res-26 /home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/merged_res/release
+io.flutter.plugins.flutter_plugin_android_lifecycle-pngs-22 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/generated/res/pngs/release
+io.flutter.plugins.flutter_plugin_android_lifecycle-resValues-23 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/generated/res/resValues/release
+io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-24 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-25 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.flutter_plugin_android_lifecycle-merged_res-26 /home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/intermediates/merged_res/release

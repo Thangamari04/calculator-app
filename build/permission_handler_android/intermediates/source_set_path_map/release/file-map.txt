@@ -20,8 +20,8 @@ com.baseflow.permissionhandler.permission_handler_android-jetified-lifecycle-vie
 com.baseflow.permissionhandler.permission_handler_android-jetified-tracing-1.2.0-19 /home/thangam/.gradle/caches/transforms-3/fee79d0d8ef3af5dbc14ef6d22d028cf/transformed/jetified-tracing-1.2.0/res
 com.baseflow.permissionhandler.permission_handler_android-main-20 /home/thangam/.pub-cache/hosted/pub.dev/permission_handler_android-10.3.6/android/src/main/res
 com.baseflow.permissionhandler.permission_handler_android-release-21 /home/thangam/.pub-cache/hosted/pub.dev/permission_handler_android-10.3.6/android/src/release/res
-com.baseflow.permissionhandler.permission_handler_android-pngs-22 /home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/generated/res/pngs/release
-com.baseflow.permissionhandler.permission_handler_android-resValues-23 /home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/generated/res/resValues/release
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-24 /home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-25 /home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.baseflow.permissionhandler.permission_handler_android-merged_res-26 /home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/intermediates/merged_res/release
+com.baseflow.permissionhandler.permission_handler_android-pngs-22 /home/thangam/calculator_app/build/permission_handler_android/generated/res/pngs/release
+com.baseflow.permissionhandler.permission_handler_android-resValues-23 /home/thangam/calculator_app/build/permission_handler_android/generated/res/resValues/release
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-24 /home/thangam/calculator_app/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-25 /home/thangam/calculator_app/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.baseflow.permissionhandler.permission_handler_android-merged_res-26 /home/thangam/calculator_app/build/permission_handler_android/intermediates/merged_res/release

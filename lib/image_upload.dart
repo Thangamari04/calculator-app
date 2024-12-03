@@ -9,7 +9,7 @@ class ImageUploadPage extends StatefulWidget {
 }
 
 class _ImageUploadPageState extends State<ImageUploadPage> {
-  File? _image;
+  final ValueNotifier<File?> _imageNotifier = ValueNotifier<File?>(null);
 
   // Method to pick an image from the camera or gallery
   Future<void> _pickImage(ImageSource source) async {
@@ -20,9 +20,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       final pickedFile = await picker.pickImage(source: source);
 
       if (pickedFile != null) {
-        setState(() {
-          _image = File(pickedFile.path); // Save file as File
-        });
+        _imageNotifier.value = File(pickedFile.path); // Update image using ValueNotifier
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('No image selected.')),
@@ -50,21 +48,16 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title:const Center (
-            child: Icon(Icons.camera_alt,
-            size: 40,
-            color: Colors.green,),
-          ),
-          content: const Text(
-              'Allow to take pictures and record videos.'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context, PermissionStatus.granted);
-              },
-              style: TextButton.styleFrom(foregroundColor: Colors.green),
-              child: const Text('Allow'),
+          title: const Center(
+            child: Icon(
+              Icons.camera_alt,
+              size: 40,
+              color: Colors.blue,
             ),
+          ),
+          content: const Text('Allow Radical Start to take pictures and record videos?',textAlign:TextAlign.center,),
+          
+          actions: [
             const Divider(
               color: Colors.grey,
               height: 1,
@@ -73,8 +66,19 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
               onPressed: () {
                 Navigator.pop(context, PermissionStatus.limited);
               },
-              style: TextButton.styleFrom(foregroundColor: Colors.green),
-              child: const Text('While Using the App'),
+              style: TextButton.styleFrom(foregroundColor: Colors.blue),
+              child: const Text('WHILE USING THE APP', textAlign:TextAlign.center,),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 1,
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context, PermissionStatus.granted);
+              },
+              style: TextButton.styleFrom(foregroundColor: Colors.blue),
+              child: const Text('ONLY THIS TIME', textAlign:TextAlign.center,),
             ),
             const Divider(
               color: Colors.grey,
@@ -84,10 +88,9 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
               onPressed: () {
                 Navigator.pop(context, PermissionStatus.denied);
               },
-              style: TextButton.styleFrom(foregroundColor: Colors.green),
-              child: const Text('Don\'t Allow'),
+              style: TextButton.styleFrom(foregroundColor: Colors.blue),
+              child: const Text('DONT ALLOW', textAlign:TextAlign.center,),
             ),
-
           ],
         );
       },
@@ -100,7 +103,6 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       permission.request();
       return true;
     } else if (result == PermissionStatus.denied) {
-      
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Permission denied permanently.')),
       );
@@ -109,7 +111,6 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
     return false;
   }
 
-  
   void _showImagePickerModal(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -143,35 +144,59 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
   }
 
   @override
+  void dispose() {
+    _imageNotifier.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+  
+    final mediaQuery = MediaQuery.of(context);
+    final screenHeight = mediaQuery.size.height;
+    // ignore: unused_local_variable
+    final screenWidth = mediaQuery.size.width;
+
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: (){
-              Navigator.pop(context);
-            },),
-            centerTitle: false,
-            backgroundColor: Colors.white,
-            elevation: 0,
-          ),
-        body: SingleChildScrollView(
+          title: null,
+        toolbarHeight: screenHeight * 0.15,
+          //flexibleSpace: Padding(
+            //padding: EdgeInsets.all(screenWidth * 0.02),
+            //child: Align(
+              //alignment: Alignment.topLeft,
+              //child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLS83XErb0zP7lBJnTQv9C2onf30pSb7PFgfO7G-0HRYv4THiKre-UvZ2k_0t0dUFDrAo&usqp=CAU',
+              //height: screenHeight *0.1,
+              //fit:BoxFit.contain,
+              //),
+            //),
+          //),
+        centerTitle: false,
+          backgroundColor: Colors.white,
+          elevation: 1,
+        ),
+        body: LayoutBuilder(
+          builder: (context,constraints) {
+
+          final screenHeight=constraints.maxHeight;
+          final screenWidth=constraints.maxWidth;
+        return Center(
+        
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Column(
                   children: [
                     Text(
-                      'Take a photo of document',
+                      'Upload Image',
                       style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 8),
-                    Text(
-                      'Please ensure the photo is clear and visible.',
-                      style: TextStyle(fontSize: 14),
-                    ),
+                    
                   ],
                 ),
               ),
@@ -179,64 +204,82 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
                 onTap: () => _showImagePickerModal(context),
                 child: Container(
                   margin: const EdgeInsets.all(20),
-                  height: 200,
-                  width: 200,
+                  height: screenHeight * 0.4,
+                  width: screenWidth * 0.8,
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.grey),
                   ),
                   child: Center(
-                    child: _image == null 
-                        ?const Icon(
-                            Icons.camera_alt,
-                            size: 50,
-                            color: Colors.grey,
-                          )
-                          :Image.file(_image!),
-
+                    child: ValueListenableBuilder<File?>(
+                      valueListenable: _imageNotifier,
+                      builder: (context, image, child) {
+                        return image == null
+                            ? const Icon(
+                                Icons.camera_alt,
+                                size: 50,
+                                color: Colors.grey,
+                              )
+                            : Image.file(image);
+                      },
+                    ),
                   ),
                 ),
               ),
-              if (_image != null)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const SizedBox(width: 10),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.black,
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                          icon: const Icon(Icons.edit, color: Colors.white,),
-                          onPressed: () => _showImagePickerModal(context),
-                        ),
-                      ),
-                      const SizedBox(width: 16.0),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.black,
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                        onPressed: () {
-                          // Handle saving the image
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Image saved successfully!')),
-                          );
-                        },
-                        icon: const Icon(Icons.check_circle, color: Colors.white,),
-                      ),
-                      
-                      ),
-                    ],
-                  ),
-                ),
+              ValueListenableBuilder<File?>(
+                valueListenable: _imageNotifier,
+                builder: (context, image, child) {
+                  return image != null
+                      ? Padding(
+                          padding: EdgeInsets.symmetric(vertical: screenHeight * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(width: screenWidth * 0.03 ),
+                              Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.black,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: IconButton(
+                                  icon: const Icon(
+                                    Icons.edit,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () => _showImagePickerModal(context),
+                                ),
+                              ),
+                              SizedBox(width: screenWidth * 0.04),
+                              Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.black,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: IconButton(
+                                  onPressed: () {
+                                    // Handle saving the image
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content: Text('Image saved successfully!')),
+                                    );
+                                  },
+                                  icon: const Icon(
+                                    Icons.check_circle,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : const SizedBox();
+                },
+              ),
             ],
           ),
+        );
+          },
         ),
       ),
     );

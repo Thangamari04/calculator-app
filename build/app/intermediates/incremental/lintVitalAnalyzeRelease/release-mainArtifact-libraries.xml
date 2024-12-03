@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:/home/thangam/my_flutter_pages/calculator_app/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/home/thangam/my_flutter_pages/calculator_app/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/home/thangam/my_flutter_pages/calculator_app/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/home/thangam/calculator_app/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/home/thangam/calculator_app/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/home/thangam/calculator_app/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
-      name="/home/thangam/my_flutter_pages/calculator_app/android@@:flutter_plugin_android_lifecycle::release"
-      jars="/home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/5020c0201a064375e2e14c9e0e79c863/transformed/out/jars/classes.jar:/home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/5020c0201a064375e2e14c9e0e79c863/transformed/out/jars/libs/R.jar"
+      name="/home/thangam/calculator_app/android@@:flutter_plugin_android_lifecycle::release"
+      jars="/home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/27230a6e917a42982c1c7285239e41cf/transformed/out/jars/classes.jar:/home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/27230a6e917a42982c1c7285239e41cf/transformed/out/jars/libs/R.jar"
       resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
-      folder="/home/thangam/my_flutter_pages/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/5020c0201a064375e2e14c9e0e79c863/transformed/out"
+      folder="/home/thangam/calculator_app/build/flutter_plugin_android_lifecycle/.transforms/27230a6e917a42982c1c7285239e41cf/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/home/thangam/my_flutter_pages/calculator_app/android@@:image_picker_android::release"
-      jars="/home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/.transforms/59423209dbf6453ec6285381aaabb3ba/transformed/out/jars/classes.jar:/home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/.transforms/59423209dbf6453ec6285381aaabb3ba/transformed/out/jars/libs/R.jar"
+      name="/home/thangam/calculator_app/android@@:image_picker_android::release"
+      jars="/home/thangam/calculator_app/build/image_picker_android/.transforms/99bdbc78a3024fe917af10bb79774ae0/transformed/out/jars/classes.jar:/home/thangam/calculator_app/build/image_picker_android/.transforms/99bdbc78a3024fe917af10bb79774ae0/transformed/out/jars/libs/R.jar"
       resolved="io.flutter.plugins.imagepicker:image_picker_android:unspecified"
-      folder="/home/thangam/my_flutter_pages/calculator_app/build/image_picker_android/.transforms/59423209dbf6453ec6285381aaabb3ba/transformed/out"
+      folder="/home/thangam/calculator_app/build/image_picker_android/.transforms/99bdbc78a3024fe917af10bb79774ae0/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/home/thangam/my_flutter_pages/calculator_app/android@@:permission_handler_android::release"
-      jars="/home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/.transforms/33de471c53ae005681dc659548b6a0ea/transformed/out/jars/classes.jar:/home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/.transforms/33de471c53ae005681dc659548b6a0ea/transformed/out/jars/libs/R.jar"
+      name="/home/thangam/calculator_app/android@@:permission_handler_android::release"
+      jars="/home/thangam/calculator_app/build/permission_handler_android/.transforms/9e11da176b52fb2e3ce0bea3c407941f/transformed/out/jars/classes.jar:/home/thangam/calculator_app/build/permission_handler_android/.transforms/9e11da176b52fb2e3ce0bea3c407941f/transformed/out/jars/libs/R.jar"
       resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
-      folder="/home/thangam/my_flutter_pages/calculator_app/build/permission_handler_android/.transforms/33de471c53ae005681dc659548b6a0ea/transformed/out"
+      folder="/home/thangam/calculator_app/build/permission_handler_android/.transforms/9e11da176b52fb2e3ce0bea3c407941f/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'provider_calculator.dart';
 import 'getx_calculator.dart';
 import 'image_upload.dart';
+import 'state_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,47 +12,39 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Calculators App',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        fontFamily: 'montserrat-medium',
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ChangeNotifierProvider(create: (_) => CalculatorProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Calculators App',
+        theme: ThemeData(
+          primarySwatch: Colors.orange,
+          fontFamily: 'poppins-regular',
+        ),
+        home: MainScreen(),
       ),
-      home: MainScreen(),
     );
   }
 }
 
-class MainScreen extends StatefulWidget {
-  @override
-  _MainScreenState createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
-
+class MainScreen extends StatelessWidget {
   final List<Widget> _screens = [
-    ChangeNotifierProvider(
-      create: (_) => CalculatorProvider(),
-      child: ProviderCalculator(),
-    ),
+    ProviderCalculator(),
     GetXCalculator(),
     ImageUploadPage(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    final navigationProvider = Provider.of<NavigationProvider>(context);
+
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          return _screens[_selectedIndex];
+          return _screens[navigationProvider.selectedIndex];
         },
       ),
       bottomNavigationBar: ClipRRect(
@@ -60,38 +53,38 @@ class _MainScreenState extends State<MainScreen> {
           topRight: Radius.circular(20.0),
         ),
         child: BottomNavigationBar(
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.blue,
+          currentIndex: navigationProvider.selectedIndex,
+          selectedItemColor: Colors.deepPurpleAccent[700],
           unselectedItemColor: Colors.grey,
-          backgroundColor: Colors.blue.shade50,
+          backgroundColor: Colors.deepPurple.shade50,
           items: const [
             BottomNavigationBarItem(
-              icon: Padding (
+              icon: Padding(
                 padding: EdgeInsets.only(top: 10.0),
-              
-              child: Icon(Icons.home),
-             ), label: 'Provider'
+                child: Icon(Icons.home),
+              ),
+              label: 'Provider',
             ),
             BottomNavigationBarItem(
-              icon: Padding (
+              icon: Padding(
                 padding: EdgeInsets.only(top: 10.0),
-              
-              child:
-               Icon(Icons.calculate_outlined),
-             ), 
-             label: 'GetX'
+                child: Icon(Icons.calculate_outlined),
+              ),
+              label: 'GetX',
             ),
             BottomNavigationBarItem(
-              icon: Padding (
+              icon: Padding(
                 padding: EdgeInsets.only(top: 10.0),
+                child: Icon(Icons.image),
+                
+              ),
+              label: 'Upload',
               
-              child:
-               Icon(Icons.image),
-             ),
-              label: 'Upload'
             ),
           ],
-          onTap: _onItemTapped,
+          onTap: (index) {
+            navigationProvider.updateIndex(index);
+          },
         ),
       ),
     );
